@@ -11,13 +11,7 @@ def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
 end
 
-def prompt_user
-  puts "Type 'h' to hit or 's' to stay"
-end
 
-def get_user_input
-  user_input = gets.strip
-end
 
 def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
@@ -29,6 +23,14 @@ def initial_round
   total = card1 + card2
   display_card_total(total)
   total
+end
+
+def prompt_user
+  puts "Type 'h' to hit or 's' to stay"
+end
+
+def get_user_input
+  user_input = gets.strip
 end
 
 def hit?(player_total)
@@ -48,6 +50,7 @@ def invalid_command
   puts 'Please enter a valid command'
   get_user_input
 end
+
 
 #####################################################
 # get every test to pass before coding runner below #
